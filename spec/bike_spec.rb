@@ -1,6 +1,6 @@
-require 'Bike'
+require 'bike'
 
-describe 'bike' do
+describe 'Bike' do
 
 	it 'shouldn\'t be broken when created' do
 		bike = Bike.new
