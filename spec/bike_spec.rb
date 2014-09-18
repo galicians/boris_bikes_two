@@ -2,7 +2,7 @@ require 'bike'
 
 describe 'Bike' do
 
-	it 'shouldn\'t be broken when created' do
+	it 'should not be broken when created' do
 		bike = Bike.new
 		expect(bike).not_to be_broken
 	end
