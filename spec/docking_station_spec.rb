@@ -24,8 +24,28 @@ describe 'docking_station' do
 	end
 
 	it 'should not accept a bike if full' do
-
+		14.times {station.dock(bike)}
+		expect(station).to be_full
+		expect { station.dock(bike) }.to raise_error(RuntimeError)
 	end
 
+	it 'should not accept anything that is not bike' do
+		expect{ station.dock(1)}.to raise_error(RuntimeError)
+	end
+
+	it 'should not release a bike when empty' do
+		expect{ station.release(bike)}.to raise_error(RuntimeError)
+	end
 
 end
+
+
+
+
+
+
+
+
+
+
+
