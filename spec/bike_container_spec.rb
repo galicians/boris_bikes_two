@@ -41,6 +41,9 @@ describe 'BikeContainer' do
 		expect(holder.broken_bikes).to eq([broken_bike])
 	end
 
-
+	it 'should release a bike' do
+		holder.dock(bike)
+		expect(holder.release(bike)).to eq(bike)
+	end
 
 end

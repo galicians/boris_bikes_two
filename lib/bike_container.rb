@@ -34,11 +34,6 @@ module BikeContainer
 		bikes.count
 	end
 
-	def release(bike)
-		raise 'RuntimeError' if @bikes.count == 0
-		bikes.delete(bike)
-	end
-
 	def available_bikes
 		bikes.reject {|bike| bike.broken?}
 	end
