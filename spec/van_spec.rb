@@ -13,6 +13,10 @@ describe 'Van' do
 		station.dock(broken_bike)
 		van.deliver(station)
 		expect(van.broken_bikes).to eq([broken_bike])
+		expect(station.available_bikes.size).to eq(1)		
+	end
+
+	it "should pick up bikes from a garage" do
 		
 	end
 

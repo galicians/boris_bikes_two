@@ -10,8 +10,8 @@ class Van
 			dock(station.release(broken_bike))
 			station.dock(release(available_bikes.last))
 		end
-
 	end
 
+	def pick_up()
 
 end
